@@ -1,0 +1,3 @@
+Your goal is to generate all the react components from the image provided.
+The image is a screenshot of a web page. The components should be structured in a way that reflects the layout and design of the page. Use appropriate HTML elements and CSS classes to match the styles in the image. The components should be reusable and modular, with props for dynamic content where applicable. Include any necessary state management and event handling logic. The generated code should be clean, well-organized, and follow best practices for React development.
+The components should be compatible with Vite and TypeScript, and use Tailwind CSS for styling. Please provide a brief explanation of the structure and any important design decisions made in the code.
