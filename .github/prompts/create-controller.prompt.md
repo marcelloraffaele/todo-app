@@ -6,3 +6,5 @@ Create a `controllers` folder and add a `TodoController` that implements the RES
 - POST /todos: add a new todo
 - GET /todos/<id> : get the todo with the id
 - PUT /todos/<id>: modify the todo.
+Generate swagger dependency classes in order to get the documentation of this API.
+Create the test for the service and for the controller class.
