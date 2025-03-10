@@ -10,6 +10,7 @@ Start all chats with `🤖 GitHub Copilot 😄`
 
 ### Java
 In Java always use Maven as build tool and JUnit as test framework.
-In Java always use UPPERCASE for private field names.
-In Java always use camelCase for public field names.
+In Java always use UPPERCASE for `private static` field names.
+In Java always use camelCase for field names and method names.
+For `Beans` always generate getters and setters.
 
