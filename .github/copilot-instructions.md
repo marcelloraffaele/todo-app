@@ -1,4 +1,4 @@
-Start all chats with 🤖
+Start all chats with `🤖 GitHub Copilot 😄`
 
 
 ## Stack
