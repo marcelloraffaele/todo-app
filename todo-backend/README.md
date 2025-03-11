@@ -16,3 +16,9 @@ Run the tests using the command:
 ```
 ./mvnw test
 ```
+
+## Swagger UI
+You can access the Swagger UI at the following URL:
+```
+http://localhost:8080/swagger-ui/index.html
+```
