@@ -1,0 +1,205 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "title": "OpenAPI definition",
+      "version": "v0"
+    },
+    "servers": [
+      {
+        "url": "http://localhost:8080",
+        "description": "Generated server url"
+      }
+    ],
+    "tags": [
+      {
+        "name": "Todo API",
+        "description": "API for managing todos"
+      }
+    ],
+    "paths": {
+      "/todos/{id}": {
+        "get": {
+          "tags": [
+            "Todo API"
+          ],
+          "summary": "Get todo by ID",
+          "description": "Returns a todo by its ID",
+          "operationId": "getTodo",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          ],
+          "responses": {
+            "404": {
+              "description": "Todo not found",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Todo"
+                  }
+                }
+              }
+            },
+            "200": {
+              "description": "Successfully retrieved todo",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Todo"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "put": {
+          "tags": [
+            "Todo API"
+          ],
+          "summary": "Update todo",
+          "description": "Updates an existing todo",
+          "operationId": "updateTodo",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Todo"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "404": {
+              "description": "Todo not found",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Todo"
+                  }
+                }
+              }
+            },
+            "200": {
+              "description": "Successfully updated todo",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Todo"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/todos": {
+        "get": {
+          "tags": [
+            "Todo API"
+          ],
+          "summary": "Get all todos",
+          "description": "Returns a list of all todos",
+          "operationId": "getAllTodos",
+          "responses": {
+            "200": {
+              "description": "Successfully retrieved todos",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Todo"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": [
+            "Todo API"
+          ],
+          "summary": "Create new todo",
+          "description": "Creates a new todo item",
+          "operationId": "createTodo",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Todo"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "Successfully created todo",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Todo"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Todo": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "description": {
+              "type": "string"
+            },
+            "creationDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "expirationDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "category": {
+              "type": "string"
+            },
+            "state": {
+              "type": "string",
+              "enum": [
+                "DONE",
+                "ACTIVE",
+                "CANCELED"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
