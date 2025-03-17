@@ -36,8 +36,8 @@ Create the test for the service class and execute it, if there are error fix it.
 
 ### Prompt 4
 Follow the instructions below:
-1. Extract the swagger definition and save it in a file `api-definitio.json`.
-2. Using GiHub Copilot Agent Mode, select the Claude 3.7 model and add as attachment the file `api-definitio.json`, add the `frontend` folder and call the agent with the following prompt:
+1. Extract the swagger definition and save it in a file `api-definition.json`.
+2. Using **GiHub Copilot Agent Mode**, select the **Claude 3.7** model and add as attachment the file `api-definition.json`, add the `frontend` folder and call the agent with the following prompt:
 ```
 Create a react application in the folder `todo-frontend` that manages todos using that API.
 The graphical aspect must be colored and must use Tailwind.
