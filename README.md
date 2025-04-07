@@ -7,7 +7,7 @@ The classic To-Do application where a user can write down all the things he want
 Using **Claude Sonnet 3.5**,
 
 ```
-create a Spring boot controller expose and API for a TODO application.
+Create a Spring boot controller expose and API for a TODO application.
 Create a `beans` folder and add a `Todo` class with the following fields: id, Description, creationDate, expirationDate, category, state[done, active, canceled]
 Create a `services` folder and add a `TodoService` that will manage a Map<Long,Todo> an a Long as currentMaxId.
 Create a `controllers` folder and add a `TodoController` that implements the REST service with the following methods:
@@ -16,6 +16,7 @@ Create a `controllers` folder and add a `TodoController` that implements the RES
 - GET /todos/<id> : get the todo with the id
 - PUT /todos/<id>: modify the todo.
 Generate swagger dependency classes in order to get the documentation of this API.
+Create Test classes for the service and the controller. Execute the tests and if there are errors, fix them.
 ```
 
 ### Prompt2
@@ -30,8 +31,10 @@ create in a `client.rest` file
 
 
 ### Prompt 3
+exec the backend and get the swagger definition and save it in a file `api-definition.json`.
+
 ```
-Create the test for the service class and execute it, if there are error fix it.
+curl -X GET "http://localhost:8080/v3/api-docs" -H "accept: application/json" -o api-definition.json
 ```
 
 ### Prompt 4
@@ -42,7 +45,7 @@ Follow the instructions below:
 Create a react application in the folder `todo-frontend` that manages todos using that API.
 The graphical aspect must be colored and must use Tailwind.
 Split the implementation into components and put the REST client in a folder named `services`.
-Tailwind is already configured, don't configure it.
+Tailwind is already configured, don't configure it. Be sure to update the the libraries and run the application, if any errorers occur, fix them.
 ```
 
 
