@@ -1,0 +1,61 @@
+### Get all todos
+GET http://localhost:8080/todos
+Accept: application/json
+
+### Create new todo
+POST http://localhost:8080/todos
+Content-Type: application/json
+
+{
+    "description": "Learn Spring Boot",
+    "category": "Programming",
+    "state": "ACTIVE",
+    "expirationDate": "2025-12-31T23:59:59"
+}
+
+### Update existing todo (replace {id} with actual todo id)
+PUT http://localhost:8080/todos/1
+Content-Type: application/json
+
+{
+    "description": "Learn Spring Boot Advanced",
+    "category": "Programming",
+    "state": "DONE",
+    "expirationDate": "2025-12-31T23:59:59"
+}
+
+### Get OpenAPI definition
+GET http://localhost:8080/v3/api-docs
+Accept: application/json
+
+### Get Swagger UI
+GET http://localhost:8080/swagger-ui/index.html
+Accept: text/html
+
+# Equivalent curl commands:
+
+# Get all todos
+# curl -X GET http://localhost:8080/todos -H "Accept: application/json"
+
+# Create new todo
+# curl -X POST http://localhost:8080/todos \
+#   -H "Content-Type: application/json" \
+#   -d '{
+#     "description": "Learn Spring Boot",
+#     "category": "Programming",
+#     "state": "ACTIVE",
+#     "expirationDate": "2025-12-31T23:59:59"
+#   }'
+
+# Update existing todo
+# curl -X PUT http://localhost:8080/todos/1 \
+#   -H "Content-Type: application/json" \
+#   -d '{
+#     "description": "Learn Spring Boot Advanced",
+#     "category": "Programming",
+#     "state": "DONE",
+#     "expirationDate": "2025-12-31T23:59:59"
+#   }'
+
+# Get OpenAPI definition
+# curl -X GET http://localhost:8080/v3/api-docs -H "Accept: application/json"
