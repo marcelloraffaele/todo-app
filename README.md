@@ -7,7 +7,7 @@ The classic To-Do application where a user can write down all the things he want
 Using **Claude Sonnet 3.5**,
 
 ```
-Create a Spring boot controller expose and API for a TODO application.
+Create a Spring boot backend controller expose and API for a TODO application.
 Create a `beans` folder and add a `Todo` class with the following fields: id, Description, creationDate, expirationDate, category, state[done, active, canceled]
 Create a `services` folder and add a `TodoService` that will manage a Map<Long,Todo> an a Long as currentMaxId.
 Create a `controllers` folder and add a `TodoController` that implements the REST service with the following methods:
@@ -77,3 +77,17 @@ npm create vite@latest todo-frontend --template react
 npm install tailwindcss @tailwindcss/vite
 ### follow this instructions https://tailwindcss.com/docs/installation/using-vite
 ```
+
+## How to run the project
+### Backend
+```bash
+cd todo-backend
+mvn clean install
+mvn spring-boot:run
+```
+
+### Frontend
+```bash
+cd todo-frontend
+npm install
+npm run dev
