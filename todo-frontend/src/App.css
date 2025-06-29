@@ -1,10 +1,15 @@
 @import "tailwindcss";
 
+body {
+  @apply bg-background text-foreground;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  @apply bg-background text-foreground;
 }
 
 .logo {
@@ -37,8 +42,18 @@
 
 .card {
   padding: 2em;
+  @apply bg-card text-foreground border border-border shadow-lg;
 }
 
-.read-the-docs {
-  color: #888;
+/* Utility for input fields */
+input, select, textarea {
+  @apply bg-input text-foreground border border-border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary;
 }
+
+/* Button styles */
+button {
+  @apply bg-primary text-white rounded px-4 py-2 transition hover:bg-accent;
+}
+
+/* Remove white background from TodoItem */
+/* The rest of the component classes will be updated in their respective files */

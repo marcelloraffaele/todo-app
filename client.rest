@@ -1,0 +1,29 @@
+### 1. Get all todos
+GET http://localhost:8080/todos
+
+### 2. Create new todo
+POST http://localhost:8080/todos
+Content-Type: application/json
+
+{
+  "description": "This is a new todo item",
+  "state": "ACTIVE",
+  "category": "General",
+  "creationDate": "2025-06-27",
+  "expirationDate": "2025-07-01"
+}
+
+### 3. Modify an existing todo (replace {id} with the actual todo id)
+PUT http://localhost:8080/todos/{id}
+Content-Type: application/json
+
+{
+  "description": "Updated description",
+  "state": "DONE",
+  "category": "General",
+  "creationDate": "2025-06-27",
+  "expirationDate": "2025-07-01"
+}
+
+### 4. Get OpenAPI definition (if available)
+GET http://localhost:8080/v3/api-docs
